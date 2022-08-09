@@ -1,0 +1,30 @@
+{
+  "name": "kea-schedule",
+  "version": "0.0.1",
+  "description": "Bootstrap node-schedule, the easy way!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ardhi/kea-schedule.git"
+  },
+  "keywords": [
+    "node",
+    "schedule",
+    "task"
+  ],
+  "author": "Ardhi Lukianto <ardhi@lukianto.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ardhi/kea-schedule/issues"
+  },
+  "homepage": "https://github.com/ardhi/kea-schedule#readme",
+  "dependencies": {
+    "fast-glob": "^3.2.11",
+    "lodash": "^4.17.21",
+    "luxon": "^3.0.1",
+    "node-schedule": "^2.1.0"
+  }
+}

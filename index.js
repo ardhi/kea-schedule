@@ -26,16 +26,17 @@ module.exports = function (options = {}) {
     const job = schedule.scheduleJob(j.time, async () => {
       let text = `[${DateTime.local().toISO({ includeOffset: false })}][${j.name}] `
       if (j.runAt) {
+        const dur = DateTime.now().diff(j.runAt).toFormat('mm:ss')
         if (j.timeout) {
           const diff = Math.abs(DateTime.now().diff(j.runAt)) / 1000
           if (diff > j.timeout) {
             text += 'timeout, reset'
             j.runAt = null
           } else {
-            text += 'still runAt, skipped'
+            text += `still running (${dur}), skipped`
           }
         } else {
-          text += 'still runAt, skipped'
+          text += `still running (${dur}), skipped`
         }
       } else {
         const start = DateTime.now()
